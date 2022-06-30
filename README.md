@@ -11,7 +11,6 @@ This is a solution to the [FAQ accordion card challenge on Frontend Mentor](http
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
@@ -31,13 +30,16 @@ Users should be able to:
 ### Screenshot
 
 Desktop
-![](./screenshot.jpg)
+![](screenshot/desktop.png)
 
 Active
-![](./screenshot.jpg)
+![](screenshot/active.png)
+
+Hover
+![](screenshot/hover.png)
 
 Mobile
-![](./screenshot.jpg)
+![](screenshot/mobile.png)
 
 ### Links
 
@@ -54,39 +56,39 @@ Mobile
 - Flexbox
 - CSS Grid
 - Desktop-first workflow
+- JavaScript
 
 ### What I learned
 
-How to build accordion component in HTML, learned it from Jonas Schmedtmann's HTML & CSS Course on Udemy.
+How to build accordion component in HTML and CSS, learned it from Jonas Schmedtmann's HTML & CSS Course on Udemy.
+If we use visibility then the border-bottom cannot display properly with spacing. In the case, better to use display: none / block.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+```scss
+.hidden {
+  display: none;
+}
 
-```css
-.proud-of-this-css {
-  color: papayawhip;
+.open .faq__question {
+  font-weight: 700;
+
+  &:hover,
+  &:active {
+    color: $color-dark-grayish-blue;
+  }
+}
+
+.open .icon {
+  transform: scaleY(-1);
+}
+
+.open .hidden {
+  display: block;
 }
 ```
 
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
-```
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Add active class to current element](https://www.w3schools.com/howto/howto_js_active_element.asp) - This helped me to know to to add active class to current element from W3 SCHOOL
 
 ## Author
 
@@ -96,7 +98,3 @@ Pon Huang
 - Art Blog - [une felt](https://une722.wordpress.com)
 
 ## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**

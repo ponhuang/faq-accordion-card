@@ -11,22 +11,20 @@ html {
 }
 
 body {
-  color: $color-dark-grayish-blue;
-  font-size: 1.2rem;
-  font-family: $font-default;
-  font-weight: 400;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
-}
+  gap: 8rem;
 
-.attribution {
-  font-size: 1.1rem;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
+  color: $color-dark-grayish-blue;
+  background-image: linear-gradient(150deg, $color-violet, $color-blue);
+
+  background-repeat: no-repeat;
+  font-size: 1.2rem;
+  font-family: $font-default;
+  font-weight: 400;
+  box-sizing: border-box;
+
+  height: 100vh;
 }

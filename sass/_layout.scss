@@ -1,0 +1,176 @@
+.main {
+  position: relative;
+  width: 92rem;
+  background-color: white;
+  box-shadow: 0 5rem 5rem -2rem rgba(53, 18, 122, 0.497159);
+  border-radius: 23px;
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  column-gap: 8.7rem;
+  padding: 7rem 9rem 8rem 0;
+}
+
+/*---------- IMAGE ----------*/
+.img {
+  position: relative;
+  width: 39rem;
+
+  &__woman {
+    position: absolute;
+    top: -5px;
+    left: -60px;
+    transform: translate(-2%, 5%);
+    z-index: 10;
+  }
+
+  &__background {
+    position: absolute;
+    top: -350px;
+    left: -570px;
+  }
+
+  // Relative to Class Main
+  &__box {
+    position: absolute;
+    top: 40%;
+    left: -1.7%;
+    transform: translate(-40%, 1.7%);
+    z-index: 20;
+  }
+
+  &__mobile {
+    display: none;
+  }
+  &__mobile-bg {
+    display: none;
+  }
+}
+
+/*---------- FAQ SECTION ----------*/
+.faq {
+  &__title {
+    font-size: 3.2rem;
+    margin-bottom: 4.3rem;
+  }
+
+  .icon {
+    height: 7px;
+    margin-left: 2px;
+  }
+
+  &__accordions {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 35rem;
+    border-bottom: 1px solid $color-light-grayish-blue;
+    padding-bottom: 1.6rem;
+    margin-bottom: 1.8rem;
+  }
+
+  &__question-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    row-gap: 1.8rem;
+    align-items: center;
+  }
+
+  &__question {
+    font-size: 1.4rem;
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+      color: $color-red;
+    }
+  }
+  &__answer {
+    // width: 31.9rem;
+    font-size: 1.2rem;
+    line-height: 18px;
+    color: $color-grayish-blue;
+  }
+}
+
+/*---------- ACTIVE USE ----------*/
+.hidden {
+  display: none;
+}
+
+.open .faq__question {
+  font-weight: 700;
+
+  &:hover,
+  &:active {
+    color: $color-dark-grayish-blue;
+  }
+}
+
+.open .icon {
+  transform: scaleY(-1);
+}
+
+.open .hidden {
+  display: block;
+}
+
+/*---------- FOOTER ----------*/
+.attribution {
+  font-size: 1.1rem;
+  text-align: center;
+  color: $color-red;
+}
+.attribution a {
+  color: $color-light-grayish-blue;
+}
+
+/*---------- 1152px ----------*/
+@media (max-width: 72em) {
+  .main {
+    margin-top: 5rem;
+    width: 35rem;
+  }
+  .container {
+    flex-direction: column;
+    padding: 13.2rem 2.4rem 4.8rem 2.4rem;
+    overflow: visible;
+  }
+  .img {
+    &__woman,
+    &__background,
+    &__box {
+      display: none;
+    }
+
+    &__mobile {
+      display: block;
+      height: 18rem;
+      position: absolute;
+      left: 20%;
+      top: -235px;
+      transform: translate(-20%, -2%);
+    }
+
+    &__mobile-bg {
+      display: block;
+      position: absolute;
+      left: 7.5%;
+      top: -130px;
+    }
+  }
+
+  .faq {
+    &__title {
+      text-align: center;
+      margin-bottom: 3.8rem;
+    }
+
+    &__accordions {
+      width: 29.7rem;
+    }
+  }
+}
