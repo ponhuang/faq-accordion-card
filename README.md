@@ -11,6 +11,7 @@ This is a solution to the [FAQ accordion card challenge on Frontend Mentor](http
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
@@ -86,6 +87,13 @@ If we use visibility then the border-bottom cannot display properly with spacing
 }
 ```
 
+### Continued development
+
+Mobile media query issue.
+
+- background size
+- main-container size
+
 ### Useful resources
 
 - [Add active class to current element](https://www.w3schools.com/howto/howto_js_active_element.asp) - This helped me to know to to add active class to current element from W3 SCHOOL
@@ -98,3 +106,5 @@ Pon Huang
 - Art Blog - [une felt](https://une722.wordpress.com)
 
 ## Acknowledgments
+
+097h
